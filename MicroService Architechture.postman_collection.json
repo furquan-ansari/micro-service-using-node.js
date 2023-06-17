@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "2ffc7ac2-a03d-4f5f-93ea-bfeff3f860e3",
+		"name": "MicroService Architechture",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16233269"
+	},
+	"item": [
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "order-list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/order-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order-list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "payment-list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/payment-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"payment-list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API_Gateway",
+			"item": [
+				{
+					"name": "payment-list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "abc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/payments/payment-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"payments",
+								"payment-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order-list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "bcd",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/orders/order-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"orders",
+								"order-list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
